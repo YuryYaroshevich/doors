@@ -1,0 +1,53 @@
+<!--<style>
+.example {   	
+  margin-bottom: 20px;
+}
+img {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+<div class="example" ng-repeat="example in examples">
+    <img ng-src="{{example.url}}" />
+</div>-->
+
+<style>
+.carousel-inner .item img{
+    width: 100%;
+}
+</style>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic"
+        ng-repeat="example in examples" data-slide-to="{{$index}}"
+        ng-class="{'active': $index == 0}"></li>
+  </ol>
+ 
+  <div class="carousel-inner">
+    <div ng-repeat="example in examples" data-slide-to="{{$index}}"
+         class="item" ng-class="{'active': $index == 0}">
+      <img ng-src="{{example.url}}">
+    </div>
+  </div>
+
+  <a id="goleft" class="left carousel-control" href="javascript:void(0)" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a id="goright" class="right carousel-control" href="javascript:void(0)" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> 
+
+<script>
+$('#goleft').click(function() {
+  $('.carousel').carousel('prev');
+});
+
+$('#goright').click(function() {
+  $('.carousel').carousel('next');
+});
+</script>

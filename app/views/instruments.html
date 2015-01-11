@@ -1,0 +1,22 @@
+
+<div ng-repeat="instrument in instruments">
+	<img ng-src="{{instrument.url}}" />
+	<p>{{instrument.description}}</p>
+</div>
+
+
+<div id="myCarousel" class="carousel slide">
+	<!-- Carousel items -->
+	<div class="carousel-inner">
+		<div class="active item">...</div>
+		<div class="item">...</div>
+		<div class="item">...</div>
+	</div>
+	<div class="carousel slide" ng-repeat="instrument in instruments">
+		<img ng-src="{{instrument.url}}" />
+		<p>{{instrument.description}}</p>
+	</div>
+	<!-- Carousel nav -->
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
