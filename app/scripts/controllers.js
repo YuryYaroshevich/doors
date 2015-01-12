@@ -12,16 +12,15 @@ controllers.controller('MainCtrl', function ($scope) {
 
 controllers.controller('ExampleCtrl', ['$scope', 'Example', function ($scope, Example) {
     $scope.examples = Example.query();
-    console.log($scope.examples); 
 }]);
 
 
 controllers.controller('InstrumentCtrl', ['$scope', 'Instrument', function ($scope, Instrument) {
     $scope.instruments = Instrument.query();
-    console.log($scope.instruments);
-  }]);
+}]);
 
-controllers.controller('RecallCtrl', function ($scope) {
-    
-  });  
+controllers.controller('RecallCtrl', ['$scope', 'Recall', function ($scope, Recall) {
+    $scope.recalls = Recall.query();
+    console.log($scope.recalls);
+}]);  
   

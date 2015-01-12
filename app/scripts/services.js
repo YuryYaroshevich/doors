@@ -25,6 +25,17 @@ services.factory('Instrument', ['$resource',
 	}
 ]);
 
+services.factory('Recall', ['$resource',
+	function($resource) {
+		return $resource('/recalls/recalls.json', {}, {
+			query: {
+				method: 'GET',
+				isArray: true
+			}
+		});
+	}
+]);
+
 /*phonecatServices.factory('Phone', ['$resource',
   function($resource){
     return $resource('phones/:phoneId.json', {}, {
