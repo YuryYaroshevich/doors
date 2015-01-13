@@ -14,6 +14,35 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <style>
+    .my-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        float: right;
+        margin-top: 15px;
+      }
+
+      .my-nav li {
+        float: left;
+      }
+
+      .nav-item {
+        display: block;
+        width: 160px;
+        text-decoration: none !important;
+        text-align: center;
+        padding-top: 9px;
+        height: 40px;
+      }
+      .nav-item:hover {
+        background-color: #428bca;
+        color: white;
+      }
+
+
+    </style>
   </head>
   <body ng-app="vovadoorsApp">
     <!--[if lt IE 7]>
@@ -23,11 +52,11 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li ><a ng-href="#/">Главная</a></li>
-          <li><a ng-href="#/examples">Примеры работы</a></li>
-          <li><a ng-href="#/instruments">Инструменты</a></li>
-          <li><a ng-href="#/recalls">Отзывы</a></li>
+        <ul class="my-nav">
+          <li><a class="nav-item" ng-href="#/">Главная</a></li>
+          <li><a class="nav-item" ng-href="#/examples">Примеры работы</a></li>
+          <li><a class="nav-item" ng-href="#/instruments">Инструменты</a></li>
+          <li><a class="nav-item" ng-href="#/recalls">Отзывы</a></li>
         </ul>
         <h3 class="text-muted">vovadoors</h3>
       </div>    
