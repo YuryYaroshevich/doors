@@ -21,6 +21,15 @@ controllers.controller('InstrumentCtrl', ['$scope', 'Instrument', function ($sco
 
 controllers.controller('RecallCtrl', ['$scope', 'Recall', function ($scope, Recall) {
     $scope.recalls = Recall.query();
-    console.log($scope.recalls);
+
+    $scope.addRecall = function() {
+      var newRecall = {};
+      newRecall.date = '15/01/2015';
+      newRecall.text = $scope.newRecallText;
+      
+      $scope.recalls.push(newRecall);
+
+      $scope.newRecallText = '';
+    };
 }]);  
   
